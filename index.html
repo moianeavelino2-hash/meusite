@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituição de Ensino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <!-- PARTE 1 -->
+        <div class="header-top">
+
+            <div class="top-content">
+
+                <div class="contactos">
+                    <span>📞 +258 84 597 8328</span>
+                    <span>✉️ moianeavelino2@gmail.com</span>
+                </div>
+
+                <div class="horario">
+                    <span>🕒 Seg a Sex das 08h as 15h</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PARTE 2 -->
+        <div class="header-main">
+
+            <div class="nav-container">
+
+                <!-- LOGÓTIPO -->
+                <div class="logo">
+                    <img src="img/logotipo.png" alt="Logótipo da instituição">
+                </div>
+
+
+                <!-- MENU -->
+                <nav>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">HOME</a>
+                        </li>
+
+
+                        <li class="dropdown">
+
+                            <a href="#">A FET ▾</a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="revista.html">Revista Waarya</a>
+                                </li>
+
+                                <li>
+                                    <a href="linhas.html">Linhas de pesquisa</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class="dropdown">
+
+                            <a href="#">ENSINO ▾</a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="graducao.html">Cursos de Graduação</a>
+                                </li>
+
+                                <li>
+                                    <a href="posgraduacao.html">Cursos de Pós-graduação</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li class="dropdown">
+
+                            <a href="#">DEPARTAMENTOS ▾</a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="pedagogico.html">Departamento Pedagógico</a>
+                                </li>
+
+                                <li>
+                                    <a href="inovacao.html">Departamento de Extensão e Inovação</a>
+                                </li>
+
+                                <li>
+                                    <a href="autoavaliacao.html">Departamento de Auto-avaliação e Qualidade</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li>
+                            <a href="pedagogico.html">Docentes</a>
+                        </li>
+
+
+                        <li class="dropdown">
+
+                            <a href="#">Vitrina ▾</a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="pedagogico.html">Eventos</a>
+                                </li>
+
+                                <li>
+                                    <a href="pedagogico.html">Noticias</a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         SLIDER
+    ========================== -->
+
+    <section class="slider">
+
+        <!-- IMAGEM 1 -->
+        <div class="slide active" style="background-image: url('img/im1.png');">
+
+            <div class="slide-content">
+
+                <h1>CRIAR</h1>
+                <h1>EMPREENDER</h1>
+                <h1>INOVAR</h1>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGEM 2 -->
+        <div class="slide" style="background-image: url('img/UPM2.jpeg');">
+
+            <div class="slide-content">
+
+                <h1>Faculdade de Engenharia</h1>
+                <h1>e Tecnologias.</h1>
+
+                <a href="#" class="btn">
+                    Ler mais
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGEM 3 -->
+        <div class="slide" style="background-image: url('img/im3.jpg');">
+
+            <div class="slide-content">
+            </div>
+
+        </div>
+
+
+        <!-- SETAS -->
+        <button class="prev" onclick="mudarSlide(-1)">❮</button>
+        <button class="next" onclick="mudarSlide(1)">❯</button>
+
+
+        <!-- INDICADORES -->
+        <div class="dots">
+
+            <span class="dot active-dot" onclick="slideAtual(0)"></span>
+            <span class="dot" onclick="slideAtual(1)"></span>
+            <span class="dot" onclick="slideAtual(2)"></span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         JAVASCRIPT DO SLIDER
+    ========================== -->
+
+    <script>
+
+        let slideIndex = 0;
+
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".dot");
+
+
+        function mostrarSlide(index) {
+
+            if (index >= slides.length) {
+                slideIndex = 0;
+            }
+
+            if (index < 0) {
+                slideIndex = slides.length - 1;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            dots.forEach(dot => {
+                dot.classList.remove("active-dot");
+            });
+
+            slides[slideIndex].classList.add("active");
+            dots[slideIndex].classList.add("active-dot");
+
+        }
+
+
+        function mudarSlide(direcao) {
+
+            slideIndex += direcao;
+            mostrarSlide(slideIndex);
+
+        }
+
+
+        function slideAtual(index) {
+
+            slideIndex = index;
+            mostrarSlide(slideIndex);
+
+        }
+
+    </script>
+
+
+    <script>
+
+        setInterval(() => {
+            mudarSlide(1);
+        }, 5000);
+
+    </script>
+
+
+    <!-- =========================
+         SEÇÃO FET
+    ========================== -->
+
+    <section class="fet-section">
+
+        <div class="fet-header">
+
+            <span class="fet-subtitle"></span>
+
+            <h2>
+                Faculdade de Engenharias e Tecnologias
+            </h2>
+
+            <p>
+                A Faculdade de Engenharia e Tecnologia foi criada em 2008,
+                sendo actualmente uma unidade inserida na Universidade Pedagógica.
+                Posiciona-se desde a sua criação, numa perspectiva de suprimento
+                de algum vazio ao nível da formação superior.
+            </p>
+
+        </div>
+
+
+        <!-- MISSÃO, VISÃO E VALORES -->
+
+        <div class="fet-cards">
+
+
+            <!-- MISSÃO -->
+            <div class="fet-card">
+
+                <div class="fet-image">
+
+                    <img src="img/mission1.png" alt="Missão">
+
+                </div>
+
+                <div class="fet-content">
+
+                    <h3>MISSÃO</h3>
+
+                    <div class="fet-line"></div>
+
+                    <p>
+                        Desenvolver capital humano qualificado, por meio de conhecimentos,
+                        tecnologias e inovação, orientado para a resolução de problemas da sociedade.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- VISÃO -->
+            <div class="fet-card">
+
+                <div class="fet-image">
+
+                    <img src="img/eye1.png" alt="Visão">
+
+                </div>
+
+                <div class="fet-content">
+
+                    <h3>VISÃO</h3>
+
+                    <div class="fet-line"></div>
+
+                    <p>
+                        Ser uma Faculdade de referência no ensino,
+                        pesquisa, extensão e inovação em Engenharias,
+                        Tecnologias e Artes.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- VALORES -->
+            <div class="fet-card">
+
+                <div class="fet-image">
+
+                    <img src="img/value1.png" alt="Valores">
+
+                </div>
+
+                <div class="fet-content">
+
+                    <h3>VALORES</h3>
+
+                    <div class="fet-line"></div>
+
+                    <p>
+                        Liberdade, Equidade, Transparência, Resiliência,
+                        Meritocracia...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOTÍCIAS
+    ========================== -->
+
+    <section class="noticias" id="noticias">
+
+        <div class="noticias-container">
+
+
+            <div class="noticias-header">
+
+                <span class="noticias-subtitulo">
+                    NOVIDADES
+                </span>
+
+                <h2>
+                    Notícias Recentes
+                </h2>
+
+                <p>
+                    Acompanhe as últimas novidades e atualizações aqui na nossa aba de notícias.
+                    Nosso objetivo é manter você sempre bem informado sobre os acontecimentos
+                    mais relevantes.
+                </p>
+
+            </div>
+
+
+            <div class="noticias-grid">
+
+
+                <!-- Notícia 1 -->
+                <article class="noticia-card">
+
+                    <div class="noticia-imagem">
+
+                        <img
+                            src="https://fet.up.ac.mz/images/PHOTO-2025-06-16-08-13-00.jpg"
+                            alt="MOZTECH 2025"
+                        >
+
+                        <span class="noticia-data">
+                            2025
+                        </span>
+
+                    </div>
+
+
+                    <div class="noticia-conteudo">
+
+                        <span class="noticia-categoria">
+                            EVENTO
+                        </span>
+
+                        <h3>
+                            MOZTECH 2025
+                        </h3>
+
+                        <p>
+                            A FET participou da MOZTECH 2025, evento organizado pelo Grupo Soico.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Ler mais <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notícia 2 -->
+                <article class="noticia-card">
+
+                    <div class="noticia-imagem">
+
+                        <img
+                            src="https://fet.up.ac.mz/images/FOTOS%20NOTICIAS/20240827_153913.jpg"
+                            alt="FACIM 2024"
+                        >
+
+                        <span class="noticia-data">
+                            2024
+                        </span>
+
+                    </div>
+
+
+                    <div class="noticia-conteudo">
+
+                        <span class="noticia-categoria">
+                            EVENTO
+                        </span>
+
+                        <h3>
+                            FACIM 2024
+                        </h3>
+
+                        <p>
+                            A FET participou na Feira Internacional de Educação,
+                            que decorreu de 26 de Agosto a 01 de Setembro de 2024,
+                            na FACIM, Marracuene.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Ler mais <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Notícia 3 -->
+                <article class="noticia-card">
+
+                    <div class="noticia-imagem">
+
+                        <img
+                            src="https://fet.up.ac.mz/images/FOTOS%20NOTICIAS/20240820_111202.jpg"
+                            alt="Actividades de Extensão e Inovação"
+                        >
+
+                        <span class="noticia-data">
+                            2024
+                        </span>
+
+                    </div>
+
+
+                    <div class="noticia-conteudo">
+
+                        <span class="noticia-categoria">
+                            ACTIVIDADES
+                        </span>
+
+                        <h3>
+                            Actividades de Extensão e Inovação
+                        </h3>
+
+                        <p>
+                            Actividades realizadas pelo Departamento de Extensão e Inovação
+                            referentes ao 2º semestre do ano de 2024.
+                        </p>
+
+                        <a href="#" class="ler-mais">
+                            Ler mais <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="noticias-botao">
+
+                <a href="#" class="btn-todas-noticias">
+                    Ver todas as notícias
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+ <section class="contacto">
+        <h2>Formulário de Contacto</h2>
+
+        <form id="formContacto">
+
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"
+                       placeholder="Digite o seu nome">
+                <span id="erroNome" class="erro"></span>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Digite o seu e-mail">
+                <span id="erroEmail" class="erro"></span>
+            </div>
+
+            <div class="campo">
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto"
+                       placeholder="Digite o assunto">
+                <span id="erroAssunto" class="erro"></span>
+            </div>
+
+            <div class="campo">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"
+                          placeholder="Digite a sua mensagem"></textarea>
+                <span id="erroMensagem" class="erro"></span>
+            </div>
+
+            <div class="botoes">
+                <button type="submit" class="btn-enviar">
+                    Enviar
+                </button>
+
+                <button type="reset" class="btn-limpar">
+                    Limpar
+                </button>
+            </div>
+
+            <p id="sucesso"></p>
+
+        </form>
+    </section>
+
+    <!-- Ligação ao JavaScript -->
+    <script src="script.js"></script>
+
+
+   
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="footer-fet">
+
+        <div class="footer-content">
+
+
+            <!-- =========================
+                 CONTACTOS
+            ========================== -->
+
+            <div class="footer-contactos">
+
+
+                <!-- Localização -->
+                <div class="footer-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <a
+                        href="https://maps.app.goo.gl/nphDzeQNV2en9gN17"
+                        target="_blank"
+                    >
+                        Campus de Lahanguene, Av. de Trabalho 2482,
+                        Maputo - Moçambique
+                    </a>
+
+                </div>
+
+
+                <!-- Telefone -->
+                <div class="footer-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a href="tel:+258845978328">
+                        (+258) 845978328 / 869678328
+                    </a>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="footer-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:fet@up.ac.mz">
+                        moianeavelino2@gmail.com
+                    </a>
+
+                </div>
+
+
+                <!-- Website -->
+                <div class="footer-item">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <a
+                        href="https://fet.up.ac.mz"
+                        target="_blank"
+                    >
+                        www.fet.up.ac.mz
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 HORÁRIO
+            ========================== -->
+
+            <div class="footer-horario">
+
+                <div class="footer-titulo">
+
+                    Funcionamento da<br>
+                    secretaria
+
+                </div>
+
+                <div class="footer-horas">
+
+                    07h30 - 15h30
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 LOGOTIPO
+            ========================== -->
+
+            <div class="footer-logo">
+
+                <img
+                    src="https://fet.up.ac.mz/images/Sem_T%C3%ADtulo-1.png?1745418473"
+                    alt="Faculdade de Engenharias e Tecnologias"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             LINHA INFERIOR
+        ========================== -->
+
+        <div class="footer-bottom"></div>
+
+
+        <div class="footer-copyright">
+
+            AVELINO VICENTE MOIANE © Copyright 2026
+
+        </div>
+
+
+        <!-- =========================
+             VOLTAR AO TOPO
+        ========================== -->
+
+        <a href="#top" class="footer-top">
+
+            <i class="fa-solid fa-chevron-up"></i>
+
+        </a>
+
+    </footer>
+
+
+</body>
+
+</html>
