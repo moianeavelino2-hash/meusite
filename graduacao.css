@@ -1,0 +1,392 @@
+/* =========================================================
+   RESET GERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   MENU DROPDOWN
+========================================================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+}
+
+
+/* =========================================================
+   PARTE SUPERIOR DO HEADER
+========================================================= */
+
+.header-top {
+    background: #f5f5f5;
+    padding: 8px 0;
+}
+
+.top-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactos {
+    display: flex;
+    gap: 20px;
+}
+
+.horario {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HEADER PRINCIPAL / MENU
+========================================================= */
+
+.header-main {
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   CONTEÚDO DA PÁGINA - BANNER
+========================================================= */
+
+.banner {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.imagem-fundo {
+    position: absolute;
+    inset: 0;
+    background-image: url("img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.titulo h1 {
+    font-size: 42px;
+    position: relative;
+    left: 30%;
+}
+
+
+/* =========================================================
+   BARRA INFERIOR DO BANNER
+========================================================= */
+
+.barra-inferior {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 8px;
+    z-index: 3;
+}
+
+.barra-amarela {
+    width: 30%;
+    background: #f2c300;
+}
+
+.barra-branca {
+    width: 70%;
+    background: white;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.introducao {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.introducao h1 {
+    font-size: 30px;
+    color: #333;
+}
+
+
+/* =========================================================
+   LISTA DE CURSOS
+========================================================= */
+
+.formacao {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px 0 60px;
+}
+
+.formacao-coluna {
+    flex: 1;
+}
+
+.formacao p {
+    margin-bottom: 18px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: white;
+}
+
+.formacao p span {
+    color: #d4a017;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer-fet {
+    background: #222;
+    color: white;
+    position: relative;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-contactos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-item i {
+    min-width: 20px;
+}
+
+.footer-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+.footer-horario {
+    text-align: center;
+}
+
+.footer-titulo {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.footer-horas {
+    margin-top: 10px;
+}
+
+.footer-logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.footer-top {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .top-content {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .contactos {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+    }
+
+    .logo {
+        margin: 15px 0;
+    }
+
+    .banner {
+        height: 230px;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .introducao h1 {
+        font-size: 24px;
+    }
+
+    .formacao {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-item {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+}

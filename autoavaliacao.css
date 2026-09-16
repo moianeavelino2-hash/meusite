@@ -1,0 +1,591 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000;
+    overflow-x: hidden;
+}
+
+
+/* ==================================================
+   DROPDOWN
+================================================== */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 220px;
+
+    background-color: #fff;
+
+    list-style: none;
+
+    padding: 10px 0;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+
+    padding: 12px 18px;
+
+    color: #222;
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f2f2f2;
+    color: #0066cc;
+}
+
+
+/* ==================================================
+   TOPO
+================================================== */
+
+.header-top {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+.top-content {
+    width: 100%;
+    max-width: 1200px;
+
+    min-height: 45px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactos {
+    display: flex;
+    gap: 30px;
+    text-align: end;
+}
+
+.contactos span,
+.horario span {
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   MENU PRINCIPAL
+================================================== */
+
+.header-main {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+
+    min-height: 90px;
+
+    margin: 0 auto;
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==================================================
+   LOGÓTIPO
+================================================== */
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+
+/* ==================================================
+   MENU
+================================================== */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0066cc;
+}
+
+
+/* ==================================================
+   CONTEÚDO DA PÁGINA
+================================================== */
+
+.container {
+    width: calc(100% - 28px);
+
+    max-width: 1200px;
+
+    margin: 26px auto 0;
+}
+
+.container h1,
+.container h2 {
+    background-color: #000;
+
+    color: white;
+
+    font-weight: normal;
+
+    padding: 6px;
+
+    margin-bottom: 8px;
+}
+
+.container h1 {
+    font-size: 16px;
+
+    height: 32px;
+}
+
+.container h2 {
+    font-size: 15px;
+
+    min-height: 33px;
+
+    margin-top: 12px;
+}
+
+.container p {
+    font-size: 11px;
+
+    line-height: 18px;
+
+    margin-bottom: 8px;
+}
+
+.container ul {
+    margin-left: 15px;
+
+    padding-left: 0;
+
+    margin-bottom: 10px;
+}
+
+.container li {
+    padding-left: 0;
+
+    margin-bottom: 6px;
+
+    line-height: 13px;
+}
+
+.container strong {
+    font-weight: bold;
+}
+
+.final {
+    font-weight: bold;
+
+    margin-top: 4px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer-fet {
+    position: relative;
+
+    width: 100%;
+
+    height: 357px;
+
+    background: #151515;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+.footer-content {
+    width: 82%;
+    max-width: 1110px;
+
+    height: 250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        270px
+        220px;
+
+    column-gap: 30px;
+}
+
+.footer-contactos {
+    padding-top: 69px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 21px;
+}
+
+.footer-item {
+    display: flex;
+
+    align-items: center;
+
+    height: 23px;
+}
+
+.footer-item i {
+    width: 57px;
+
+    min-width: 57px;
+
+    color: white;
+
+    font-size: 19px;
+
+    text-align: left;
+}
+
+.footer-item a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.footer-item a:hover {
+    color: #168bd0;
+}
+
+.footer-horario {
+    padding-top: 79px;
+}
+
+.footer-titulo {
+    color: white;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    font-weight: 400;
+
+    margin-bottom: 39px;
+}
+
+.footer-horas {
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.footer-logo {
+    padding-top: 91px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: flex-start;
+}
+
+.footer-logo img {
+    width: 195px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+.footer-bottom {
+    position: absolute;
+
+    left: 50%;
+    bottom: 59px;
+
+    transform: translateX(-50%);
+
+    width: 82%;
+    max-width: 1110px;
+
+    height: 1px;
+
+    background: #303030;
+}
+
+.footer-top {
+    position: absolute;
+
+    right: 30px;
+    bottom: 59px;
+
+    width: 37px;
+    height: 37px;
+
+    border-radius: 50%;
+
+    background: #303030;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-top:hover {
+    background: #0056a6;
+
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    position: absolute;
+
+    bottom: 18px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 11px;
+
+    font-weight: 400;
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE DO MENU
+================================================== */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVIDADE DO FOOTER
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-content {
+        width: 90%;
+
+        grid-template-columns:
+            1fr
+            220px
+            180px;
+    }
+
+    .footer-bottom {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .footer-fet {
+        height: auto;
+
+        padding: 50px 0 90px;
+    }
+
+    .footer-content {
+        width: 88%;
+
+        height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .footer-contactos {
+        padding-top: 0;
+    }
+
+    .footer-horario {
+        padding-top: 0;
+    }
+
+    .footer-titulo {
+        margin-bottom: 15px;
+    }
+
+    .footer-logo {
+        padding-top: 0;
+
+        justify-content: flex-start;
+    }
+
+    .footer-logo img {
+        width: 180px;
+    }
+
+    .footer-bottom {
+        width: 88%;
+
+        bottom: 50px;
+    }
+
+    .footer-top {
+        right: 20px;
+
+        bottom: 12px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .top-content {
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding: 10px;
+    }
+
+    .contactos {
+        flex-direction: column;
+
+        gap: 5px;
+
+        align-items: center;
+    }
+
+    .nav-container {
+        padding: 15px 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .footer-item a {
+        white-space: normal;
+
+        font-size: 11px;
+    }
+
+    .footer-item i {
+        width: 45px;
+
+        min-width: 45px;
+    }
+}

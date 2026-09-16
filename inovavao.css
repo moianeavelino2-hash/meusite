@@ -1,0 +1,597 @@
+/* =========================================================
+   RESET GERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* =========================================================
+   CABEÇALHO SUPERIOR
+========================================================= */
+
+.header-top {
+    background: black;
+    padding: 8px 0;
+}
+
+.top-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactos {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+.horario {
+    font-size: 14px;
+    color: white;
+}
+
+
+/* =========================================================
+   CABEÇALHO PRINCIPAL E MENU
+========================================================= */
+
+.header-main {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   MENU DROPDOWN
+========================================================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    padding: 12px 15px;
+    color: #333;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO / CABEÇALHO DA PÁGINA
+========================================================= */
+
+.hero {
+    background-image: url("img/extensao.jpg");
+
+    color: white;
+    padding: 300px 0;
+    text-align: left;
+}
+
+.hero h1 {
+    color: yellow;
+    font-size: 50px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+========================================================= */
+
+.intro {
+    position: relative;
+    min-height: 267px;
+    background: #f1f1f1;
+    padding: 65px 42px 50px 42px;
+    overflow: hidden;
+}
+
+.intro .container {
+    position: relative;
+    z-index: 2;
+}
+
+.intro h1 {
+    max-width: 900px;
+    margin: -20px;
+    text-align: left;
+}
+
+
+/* Forma amarela da introdução */
+
+.yellow-shape {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 250px;
+
+    background: #ffd000;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        0 100%
+    );
+}
+
+
+/* =========================================================
+   ÁREAS DE ATUAÇÃO
+========================================================= */
+
+.areas {
+    background: #242424;
+
+    padding: 85px 42px 55px 42px;
+}
+
+
+/* Título */
+
+.areas h2 {
+    color: #ffd000;
+    font-size: 17px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   GRID DAS ÁREAS
+========================= */
+
+.areas-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 65px;
+    row-gap: 125px;
+}
+
+
+/* Cada área */
+
+.area {
+    min-height: 70px;
+}
+
+
+/* Número e título */
+
+.area h3 {
+    color: #ffd000;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 9px;
+}
+
+
+/* Descrição */
+
+.area p {
+    color: #ffffff;
+
+    font-size: 11px;
+    line-height: 1.35;
+
+    max-width: 500px;
+}
+
+
+/* =========================
+   MENU / NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+
+    height: 62px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 42px;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+
+/* Menu */
+
+.navbar ul {
+    list-style: none;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #1455d9;
+}
+
+
+/* Link ativo */
+
+.navbar ul li a.active {
+    color: #1455d9;
+}
+
+
+/* =========================
+   COMPETÊNCIAS
+========================= */
+
+.competencias {
+    background: #242424;
+
+    padding: 15px 42px 180px 42px;
+}
+
+
+/* Título */
+
+.competencias h2 {
+    color: #ffd000;
+
+    font-size: 17px;
+
+    margin-bottom: 55px;
+}
+
+
+/* Texto */
+
+.competencias p {
+    color: #ffffff;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    max-width: 1000px;
+}
+
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer-fet {
+    background: #222;
+    color: white;
+    position: relative;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-contactos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-item i {
+    width: 20px;
+    min-width: 20px;
+}
+
+.footer-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+.footer-horario {
+    text-align: center;
+}
+
+.footer-titulo {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.footer-horas {
+    margin-top: 10px;
+}
+
+.footer-logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.footer-top {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-top:hover {
+    color: #f2c300;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - TABLETS
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - TELEMÓVEIS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .top-content {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .contactos {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-container {
+        width: 100%;
+    }
+
+    .logo {
+        margin: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 12px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .intro {
+        padding: 40px 15px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .areas {
+        padding: 40px 15px;
+    }
+
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .competencias {
+        padding: 40px 15px;
+    }
+
+    .competencias p {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-item {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-top {
+        right: 15px;
+    }
+}

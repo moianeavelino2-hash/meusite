@@ -1,0 +1,401 @@
+/* =========================================================
+   RESET GERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* =========================================================
+   PARTE SUPERIOR DO CABEÇALHO
+========================================================= */
+
+.header-top {
+    background: #080808;
+    padding: 8px 0;
+}
+
+.top-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactos {
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+
+.horario {
+    font-size: 14px;
+    color: white;
+}
+
+
+/* =========================================================
+   CABEÇALHO PRINCIPAL
+========================================================= */
+
+.header-main {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGÓTIPO
+========================================================= */
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================================
+   MENU PRINCIPAL
+========================================================= */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+
+    padding: 20px 15px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   MENU DROPDOWN
+========================================================= */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 230px;
+
+    background: #fff;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    padding: 12px 15px;
+
+    color: #333;
+
+    font-weight: normal;
+
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer-fet {
+    background: #222;
+
+    color: white;
+
+    position: relative;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 40px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* =========================================================
+   CONTACTOS DO RODAPÉ
+========================================================= */
+
+.footer-contactos {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.footer-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.footer-item i {
+    width: 20px;
+
+    min-width: 20px;
+}
+
+.footer-item a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   HORÁRIO
+========================================================= */
+
+.footer-horario {
+    text-align: center;
+}
+
+.footer-titulo {
+    font-weight: bold;
+
+    line-height: 1.5;
+}
+
+.footer-horas {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   LOGÓTIPO DO RODAPÉ
+========================================================= */
+
+.footer-logo img {
+    max-width: 180px;
+
+    height: auto;
+}
+
+
+/* =========================================================
+   LINHA INFERIOR
+========================================================= */
+
+.footer-bottom {
+    border-top: 1px solid #555;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.footer-copyright {
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+.footer-top {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+}
+
+.footer-top:hover {
+    color: #d4a017;
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   TELEMÓVEIS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .top-content {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    .contactos {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .nav-container {
+        width: 100%;
+    }
+
+    .logo {
+        margin: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 12px;
+    }
+
+    .dropdown-menu {
+        position: static;
+
+        width: 100%;
+
+        box-shadow: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+
+        align-items: center;
+    }
+
+    .footer-item {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+    }
+
+    .footer-top {
+        right: 15px;
+    }
+}

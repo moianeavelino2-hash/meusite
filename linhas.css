@@ -1,0 +1,391 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+
+/* =========================
+   PARTE SUPERIOR DO HEADER
+========================= */
+
+.header-top {
+    background: #080808;
+    padding: 8px 0;
+}
+
+.header-top span {
+    color: #ffffff;
+}
+
+.contactos span,
+.horario span {
+    color: white;
+}
+
+.header-top span {
+    color: #000;
+}
+
+.contactos span,
+.horario span {
+    color: white;
+}
+
+.top-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactos {
+    display: flex;
+    gap: 25px;
+}
+
+.horario {
+    text-align: right;
+}
+
+
+/* =========================
+   HEADER PRINCIPAL
+========================= */
+
+.header-main {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 12px;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #e5a900;
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    padding: 12px 15px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+}
+
+
+/* =========================
+   LINHAS DE PESQUISA
+========================= */
+
+.departamentos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.departamento {
+    margin-bottom: 45px;
+}
+
+.departamento h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.departamento ul {
+    margin-left: 25px;
+    padding-left: 20px;
+}
+
+.departamento ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.footer-fet {
+    background: #222;
+    color: #fff;
+    position: relative;
+}
+
+.footer-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-contactos {
+    flex: 1;
+}
+
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.footer-item i {
+    width: 20px;
+    margin-top: 3px;
+}
+
+.footer-item a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.footer-item a:hover {
+    color: #e5a900;
+}
+
+
+/* =========================
+   HORÁRIO DO RODAPÉ
+========================= */
+
+.footer-horario {
+    text-align: center;
+    min-width: 180px;
+}
+
+.footer-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.footer-horas {
+    font-size: 16px;
+}
+
+
+/* =========================
+   LOGO DO RODAPÉ
+========================= */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+}
+
+.footer-logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+
+/* =========================
+   PARTE INFERIOR
+========================= */
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1200px;
+    height: 1px;
+    background: #555;
+    margin: auto;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+========================= */
+
+.footer-top {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 992px) {
+
+    .nav-container {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+
+    .footer-contactos,
+    .footer-horario,
+    .footer-logo {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .top-content {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .contactos {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .horario {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+    }
+
+    .departamentos {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .departamento h2 {
+        font-size: 20px;
+    }
+
+    .departamento ul li {
+        font-size: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-item {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        margin-top: 20px;
+    }
+
+    .footer-top {
+        right: 15px;
+    }
+}
